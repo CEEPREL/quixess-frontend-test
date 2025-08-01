@@ -11,9 +11,9 @@ const GlobalModal: React.FC = () => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
-      <div className="dark:bg-black bg-white rounded-lg shadow-lg p-6 relative max-w-md w-full z-50">
+      <div className="dark:bg-black rounded-lg shadow-lg p-6 relative max-w-md w-full z-50">
         <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-900"
+          className="absolute top-2 right-2 text-gray-300 hover:text-gray-600"
           onClick={() => dispatch(closeModal())}
         >
           ✕

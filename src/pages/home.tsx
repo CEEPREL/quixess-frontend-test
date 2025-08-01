@@ -1,4 +1,7 @@
+import OnBoarding from "../components/on-boarding/on-boarding-process";
 import { ThemeToggle } from "../components/ui/buttons/theme-toggle";
+import { openModal } from "../redux/features/modal/modal-slice";
+import { useAppDispatch } from "../redux/hooks";
 
 export default function LandingPage() {
   return (
@@ -37,13 +40,19 @@ export default function LandingPage() {
 
 // Reusable CTA Section
 function CallToActionButtons() {
+  const dispatch = useAppDispatch();
+  const handleCardClick = () => {
+    dispatch(openModal(<OnBoarding />));
+  };
   return (
     <div className="flex flex-col gap-4">
-      <a href="/register">
-        <button className="w-full py-3 bg-green-500 text-white rounded-md font-medium shadow-md hover:bg-green-600 transition">
-          Get Started
-        </button>
-      </a>
+      <button
+        onClick={handleCardClick}
+        className="w-full py-3 bg-green-500 text-white rounded-md font-medium shadow-md hover:bg-green-600 transition"
+      >
+        Get Started
+      </button>
+
       <a href="/login">
         <button className="w-full py-3 border border-green-400 text-green-500 rounded-md font-medium hover:bg-green-50 dark:hover:bg-zinc-800 transition">
           Log In
