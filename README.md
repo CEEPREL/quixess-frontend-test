@@ -34,11 +34,11 @@ A lightweight, fast, and modern onboarding experience built using React, TypeScr
 src/
 ├── assets/                   # Static assets and images
 ├── components/               # Reusable UI components
-│   ├── GlobalModal.tsx
-│   ├── LoginForm.tsx
-│   └── OnboardingModal.tsx
+│   ├──
+│   ├──
+│   └──
 ├── pages/                    # Route-level views
-│   ├── LoginPage.tsx
+│   │
 │   ├── WelcomePage.tsx
 │   └── HomePage.tsx
 ├── redux/                    # Redux Toolkit setup
