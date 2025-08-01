@@ -1,69 +1,107 @@
-# React + TypeScript + Vite
+# Onboarding Modal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, fast, and modern onboarding experience built using React, TypeScript, Vite, Tailwind CSS, Framer Motion, and Redux Toolkit. The app features a login screen, animated error handling, and a 3-step onboarding modal with clean architecture and reusable components.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- Add a screenshot or GIF of the modal flow below -->
 
-## Expanding the ESLint configuration
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.30.29.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.30.52.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.31.08.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.31.25.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.31.39.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.31.57.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.32.19.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.32.35.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.32.42.png)
+![Screenshots](https://github.com/CEEPREL/quixess-frontend-test/blob/onboardinh/public/ss/Screenshot%202025-08-01%20at%2023.32.49.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Vite-powered development with TypeScript support
+- Global modal control using Redux Toolkit
+- Tailwind CSS for consistent and responsive UI design
+- Framer Motion for smooth modal and transition animations
+- Error shake animation on failed validation
+- Reusable modal and form components
+- Strict input validation per onboarding step
+- Clean and scalable architecture
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Directory Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── assets/                   # Static assets and images
+├── components/               # Reusable UI components
+│   ├── GlobalModal.tsx
+│   ├── LoginForm.tsx
+│   └── OnboardingModal.tsx
+├── pages/                    # Route-level views
+│   ├── LoginPage.tsx
+│   ├── WelcomePage.tsx
+│   └── HomePage.tsx
+├── redux/                    # Redux Toolkit setup
+│   └── features/
+│       └── modal/
+│           └── modal-slice.ts
+├── App.tsx                   # Main app layout and routing
+└── main.tsx                  # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Clone the repository
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/onboarding-modal-app.git
+cd onboarding-modal-app
 ```
+
+### Install dependencies
+
+```bash
+yarn install
+# or
+npm install
+```
+
+### Start development server
+
+```bash
+yarn dev
+# or
+npm run dev
+```
+
+### Build for production
+
+```bash
+yarn build
+# or
+npm run build
+```
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Redux Toolkit
+- React Router DOM
+
+## Customization
+
+- Update `OnboardingModal.tsx` to modify onboarding steps or validation logic
+- Change theme colors in `tailwind.config.js`
+- Add persistent storage or authentication as needed
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+For questions, contributions, or suggestions, feel free to open an issue or pull request.
