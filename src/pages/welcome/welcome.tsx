@@ -9,6 +9,9 @@ const WelcomePage: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-zinc-950 text-center px-6"
     >
+      <a href="/" className="underline text-green-600">
+        Home
+      </a>
       <h1 className="text-4xl font-bold text-green-600 dark:text-green-400 mb-4">
         Welcome!
       </h1>
